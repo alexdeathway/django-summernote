@@ -8,7 +8,6 @@ from django_summernote.utils import (
 class DjangoSummernoteConfig(AppConfig):
     name = 'django_summernote'
     verbose_name = 'Django Summernote'
-    default_auto_field = 'django.db.models.AutoField'
 
     theme = 'bs3'
     config = {}
@@ -35,7 +34,7 @@ class DjangoSummernoteConfig(AppConfig):
             'attachment_filesize_limit': 1024 * 1024,
             'attachment_require_authentication': False,
             'attachment_model': 'django_summernote.Attachment',
-            'attachment_absolute_uri': True,
+            'attachment_absolute_uri': False,
 
             # additional test_func, for example you want to check if user is in specific group:
             # https://docs.djangoproject.com/en/2.2/topics/auth/default/#django.contrib.auth.mixins.UserPassesTestMixin
